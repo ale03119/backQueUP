@@ -11,15 +11,15 @@ import {
 
 const router = Router();
 
-router.get("/quejas",autenticacion,getQuejas);//funciona 😃
+router.get("/quejas",getQuejas);//funciona 😃
 
-router.get("/queja/:id",autenticacion,getQueja);//funciona 😃
+router.get("/queja/:id",getQueja);//funciona 😃
 
 router.post("/queja",fileUpload({useTempFiles : true,tempFileDir : '../imagenes'}),createQueja);//funciona 😃
 
-router.put("/queja",autenticacion,updateQueja);//funciona 😃
+router.put("/queja",updateQueja);//funciona 😃
 
-router.delete("/queja/:id",autenticacion,deleteQueja);//funciona 😃
+router.delete("/queja/:id",deleteQueja);//funciona 😃
 
 
 
